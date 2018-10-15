@@ -1,0 +1,22 @@
+{
+  "apps" : [{
+        "name": "pm2",
+        "script" : "server.js",
+        "instances" : "1",
+		"exec_mode" : "cluster" ,
+        "watch":[
+              "static",
+              "server.js"
+        ],
+        "ignore_watch" : [
+              "node_modules",
+              "public/image"
+        ],
+        "watch_options": {
+              "followSymlinks": false
+        },
+        "log_date_format" : "YYYY-MM-DD HH:mm Z",
+        "error_file" : "d:/error.log",
+        "out_file" : "d:/out.log"
+		}]
+}
