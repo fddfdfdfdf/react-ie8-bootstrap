@@ -10,6 +10,9 @@ import Page1 from 'bundle-loader?lazy&name=page1!pages/Page1/Page1';
 import Counter from 'bundle-loader?lazy&name=counter!pages/Counter/Counter';
 import UserInfo from 'bundle-loader?lazy&name=userInfo!pages/UserInfo/UserInfo';
 import NotFound from 'bundle-loader?lazy&name=notFound!pages/NotFound/NotFound';
+import hello from 'bundle-loader?lazy&name=hello!components/Nav/Nav';
+
+
 
 const createComponent = (component) => (props) => (
     <Bundle load={component}>
@@ -26,6 +29,7 @@ export default () => (
             <Route path="/page1/:dd?" component={createComponent(Page1)}/>
             <Route path="/counter" component={createComponent(Counter)}/>
             <Route path="/userinfo" component={createComponent(UserInfo)}/>
+            <Route path="/hello" component={createComponent(hello)}/>
             <Route component={createComponent(NotFound)}/>
         </Switch>
     </div>
