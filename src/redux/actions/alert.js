@@ -21,7 +21,7 @@ export function alerthide(text,status) {
 }
 
 export function alertshow(text,status) {
-
+    console.log('1')
     return {
         type: ALERTSHOW,
         text: text,

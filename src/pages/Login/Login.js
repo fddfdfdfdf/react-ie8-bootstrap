@@ -1,13 +1,15 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
+import  { connect } from "react-redux";
+import './Login.css'
+import { DatePicker } from 'antd';
 
-import './Page1.css';
+export default class Hello extends Component {
 
-import image from './images/brickpsert.jpg';
-
-export default class Page1 extends Component {
     constructor(props, context) {
         super(props, context)
-        this.state = {}
+        this.state = {
+
+        }
     }
 
     componentWillMount() {
@@ -21,6 +23,7 @@ export default class Page1 extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
+        return true
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -31,9 +34,9 @@ export default class Page1 extends Component {
 
     render() {
         return (
-           <div>
-
-           </div>
+            <div>
+                <DatePicker></DatePicker>
+            </div>
         )
     }
 }
