@@ -3,7 +3,7 @@
         "name": "pm2",
         "script" : "server.js",
         "instances" : "1",
-		"exec_mode" : "cluster" ,
+		"exec_mode" : " cluster" ,
         "watch":[
               "static",
               "server.js"
