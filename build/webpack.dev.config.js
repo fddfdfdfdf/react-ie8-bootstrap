@@ -13,7 +13,10 @@ const devConfig = {
         loaders: [{
             test: /\.css$/,
             loaders: ["style-loader", "css-loader", "postcss-loader"]
-        }]
+        },{
+              test:   /\.less$/,
+              loaders:  ["style-loader", "css-loader?modules&localIdentName=[name]__[local]", "postcss-loader","less-loader"]
+          }]
     },
     devServer: {
         historyApiFallback: true,

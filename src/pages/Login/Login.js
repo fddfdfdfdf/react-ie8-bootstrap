@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import  { connect } from "react-redux";
-import './Login.css'
+import  Style from  './Login.less';
 import { DatePicker } from 'antd';
 
 export default class Hello extends Component {
@@ -34,7 +34,7 @@ export default class Hello extends Component {
 
     render() {
         return (
-            <div>
+            <div className={Style.loginTable}>
                 <DatePicker></DatePicker>
             </div>
         )

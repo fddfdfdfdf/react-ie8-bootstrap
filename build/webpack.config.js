@@ -11,7 +11,8 @@ const publicConfig = {
     devtool: 'cheap-module-source-map',
     module: {
         loaders: [
-            {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")}
+            {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader", "postcss-loader")}  ,
+            {test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader","css-loader?modules&localIdentName=[name]__[local]","postcss-loader","less-loader")}
         ]
     },
     plugins: [
@@ -35,7 +36,7 @@ const publicConfig = {
         //         'NODE_ENV': JSON.stringify('production')
         //     }
         // }),
-        new ExtractTextPlugin('./../dist/css/[name].[contenthash:5].css')
+        new ExtractTextPlugin('css/[name].[contenthash:5].css')
     ]
 
 };
